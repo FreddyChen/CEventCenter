@@ -1,9 +1,22 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'// 新增
+
+publish {// 新增
+    userOrg = 'freddychen'// 注册bintray时的username
+    groupId = 'com.freddy'// 项目路径
+    artifactId = 'eventcenter_lib'// 项目名
+    publishVersion = '1.0.1'// 发布版本号
+    desc = 'An Android Event Distribution Center Library is implemented based on object pool and interface callback. Implement message event transfer functions like Broadcast Receiver/RxBus/EventBus, etc. for message transfer communication between Activity/Fragment/Service.'// 项目描述，可选项
+    website = 'https://github.com/FreddyChen/CEventCenter'// 项目站点，可选项
+
+}
 
 android {
     compileSdkVersion 28
 
-
+    lintOptions { // 新增
+        abortOnError false
+    }
 
     defaultConfig {
         minSdkVersion 15
