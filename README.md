@@ -1,0 +1,2 @@
+# CEventCenter
+一个Android事件分发中心库，基于对象池及接口回调实现。实现类似BroadcastReceiver/RxBus/EventBus等的消息事件传递功能，用于在Activity/Fragment/Service之间的消息传递通讯。
