@@ -2,11 +2,10 @@
 一个Android事件分发中心库，基于对象池及接口回调实现。实现类似BroadcastReceiver/RxBus/EventBus等的消息事件传递功能，用于在Activity/Fragment/Service之间的消息传递通讯。
 
 ### 使用方式，以Activity为例，Fragment/Service同样
+implementation 'com.freddy:eventcenter_lib:1.0.1'
+
 ```
 1.添加依赖；
-````
-implementation 'com.freddy:eventcenter_lib:1.0.1'
-````
 2.在需要注册监听器的Activity实现I_CEventCenter接口，例：public class MainActivity extends AppCompatActivity implements I_CEventListener {}；
 3.重写onCEvent(String topic, int msgCode, int resultCode, Object obj){ } 方法；
 4.在需要注册监听器的Activity的onCreate()方法中调用CEventCenter.registerEventListener(I_CEventListener listener, String topic/String[] topics)注册监听器；
