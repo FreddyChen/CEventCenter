@@ -2,7 +2,9 @@
 一个Android事件分发中心库，基于对象池及接口回调实现。实现类似BroadcastReceiver/RxBus/EventBus等的消息事件传递功能，用于在Activity/Fragment/Service之间的消息传递通讯。
 
 ### 使用方式，以Activity为例，Fragment/Service同样
+```
 implementation 'com.freddy:eventcenter_lib:1.0.1'
+```
 
 ```
 1.添加依赖；
