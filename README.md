@@ -3,15 +3,13 @@
 
 ### 使用方式，以Activity为例，Fragment/Service同样
 ```
-1.引入eventcenter_lib，implementation project(':eventcenter_lib')；
+1.引入eventcenter_lib，implementation 'com.freddy:eventcenter_lib:1.0.1'
 2.在需要注册监听器的Activity实现I_CEventCenter接口，例：public class MainActivity extends AppCompatActivity implements I_CEventListener {}；
 3.重写onCEvent(String topic, int msgCode, int resultCode, Object obj){ } 方法；
 4.在需要注册监听器的Activity的onCreate()方法中调用CEventCenter.registerEventListener(I_CEventListener listener, String topic/String[] topics)注册监听器；
 5.在需要注册监听器的Activity的onDestroy()方法中调用CEventCenter.unregisterEventListener(I_CEventListener listener, String topic/String[] topics)注销监听器；
 6.在需要发布事件的Activity调用CEventCenter.dispatchEvent(CEvent event/ String topic, int msgCode, int resultCode, Object obj)方法发布事件即可。
 ```  
-
-注：jcenter正在审核中，所以目前可以先通过下载源码方式进行依赖，后续会发布到jcenter上，以gradle方式进行依赖。
 
 ## 使用过程中，如果有任何疑问，请联系我。
 ## 如果该项目对你有用，麻烦star一下哈。。。
