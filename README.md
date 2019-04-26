@@ -3,10 +3,10 @@
 
 ### 使用方式，以Activity为例，Fragment/Service同样
 ```
-```
+1.添加依赖；
+````
 implementation 'com.freddy:eventcenter_lib:1.0.1'
-```
-1.引入eventcenter_lib，implementation 'com.freddy:eventcenter_lib:1.0.1'
+````
 2.在需要注册监听器的Activity实现I_CEventCenter接口，例：public class MainActivity extends AppCompatActivity implements I_CEventListener {}；
 3.重写onCEvent(String topic, int msgCode, int resultCode, Object obj){ } 方法；
 4.在需要注册监听器的Activity的onCreate()方法中调用CEventCenter.registerEventListener(I_CEventListener listener, String topic/String[] topics)注册监听器；
